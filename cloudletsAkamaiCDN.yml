@@ -1,0 +1,16 @@
+---
+
+- name: Creates and Update Akamai Cloudlets CDN
+  hosts: localhost
+  connection: local
+
+  roles:
+    - cloudletsAkamaiCDN
+
+  environment:
+    AKAMAI_HOST: '{{ AKAMAI_HOST }}'
+    AKAMAI_CLIENT_TOKEN: '{{ AKAMAI_CLIENT_TOKEN }}'
+    AKAMAI_CLIENT_SECRET: '{{ AKAMAI_CLIENT_SECRET }}'
+    AKAMAI_ACCESS_TOKEN: '{{ AKAMAI_ACCESS_TOKEN }}'
+ 
+  
