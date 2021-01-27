@@ -3,42 +3,7 @@
                 {
                    "type": "erMatchRule",
                    "id":0,
-                   "name": "Rule01",
-                    "start": 0,
-                    "end": 0,  
-                    "matches": [
-                       {
-                           "matchValue": "https", 
-                           "matchOperator": "equals",
-                           "negate": false,
-                           "caseSensitive": false, 
-                           "matchType": "protocol"
-                       }, 
-                       { 
-                           "matchValue": "akamaipremium.dev.technology.ca.gov", 
-                           "matchOperator": "equals", 
-                           "negate": false, 
-                           "caseSensitive": false, 
-                           "matchType": "hostname"
-                       }, 
-                       { 
-                           "matchValue": "ruletest01", 
-                           "matchOperator": "equals",
-                           "negate": false, 
-                           "caseSensitive": false,
-                           "matchType": "path"
-                       }
-                       
-                   ],
-                    "statusCode": 301, 
-                    "redirectURL": "page3.php", 
-                    "useIncomingQueryString": false, 
-                    "useRelativeUrl": "relative_url"
-               },
-               {
-                   "type": "erMatchRule",
-                   "id":0,
-                   "name": "Rule02",
+                   "name": "Rule04",
                     "start": 0,
                     "end": 0,  
                     "matches": [
@@ -58,6 +23,41 @@
                        }, 
                        { 
                            "matchValue": "ruletest02", 
+                           "matchOperator": "equals",
+                           "negate": false, 
+                           "caseSensitive": false,
+                           "matchType": "path"
+                       }
+                       
+                   ],
+                    "statusCode": 301, 
+                    "redirectURL": "page3.php", 
+                    "useIncomingQueryString": false, 
+                    "useRelativeUrl": "relative_url"
+               },
+               {
+                   "type": "erMatchRule",
+                   "id":0,
+                   "name": "Rule03",
+                    "start": 0,
+                    "end": 0,  
+                    "matches": [
+                       {
+                           "matchValue": "https", 
+                           "matchOperator": "equals",
+                           "negate": false,
+                           "caseSensitive": false, 
+                           "matchType": "protocol"
+                       }, 
+                       { 
+                           "matchValue": "akamaipremium.dev.technology.ca.gov", 
+                           "matchOperator": "equals", 
+                           "negate": false, 
+                           "caseSensitive": false, 
+                           "matchType": "hostname"
+                       }, 
+                       { 
+                           "matchValue": "ruletest03", 
                            "matchOperator": "equals",
                            "negate": false, 
                            "caseSensitive": false,
