@@ -1,0 +1,6 @@
+resource_group_name: "RG-ODI-SCRIPTTESTING-D-001"
+Account_code: "18BCP00006"
+Cost_Center : "067"
+Cost_Center_present: "100"
+Customer_ID : "DevOps"
+Department : "CDT"

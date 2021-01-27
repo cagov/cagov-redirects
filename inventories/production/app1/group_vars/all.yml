@@ -1,0 +1,3 @@
+Resource_Group: "PROD-ASE01-067-RG"
+Purge_Profile_Name: "prodase067verizondsacdn"
+purge_name: "pge"
