@@ -22,7 +22,7 @@
                            "matchType": "hostname"
                        }, 
                        { 
-                           "matchValue": "state-dashboard", 
+                           "matchValue": "/state-dashboard/", 
                            "matchOperator": "equals",
                            "negate": false, 
                            "caseSensitive": false,
@@ -31,7 +31,7 @@
                        
                    ],
                     "statusCode": 301, 
-                    "redirectURL": "safer-economy", 
+                    "redirectURL": "/safer-economy/", 
                     "useIncomingQueryString": false, 
                     "useRelativeUrl": "relative_url"
                },
