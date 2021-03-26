@@ -57,18 +57,15 @@
                            "matchType": "hostname"
                        }, 
                        { 
-                           "matchValue": "ruletest03", 
-                           "matchOperator": "equals",
-                           "negate": false, 
-                           "caseSensitive": false,
-                           "matchType": "path"
+                           "matchValue": "^pdf/(.*)", 
+                           "matchType": "regex"
                        }
                        
                    ],
                     "statusCode": 301, 
-                    "redirectURL": "page3.php", 
+                    "redirectURL": "https://files.covid19.ca.gov/pdf/\1", 
                     "useIncomingQueryString": false, 
-                    "useRelativeUrl": "relative_url"
+                    "useRelativeUrl": false
                }
            ] 
 }
