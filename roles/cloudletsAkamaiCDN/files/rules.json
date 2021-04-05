@@ -35,39 +35,40 @@
                     "useIncomingQueryString": false, 
                     "useRelativeUrl": "relative_url"
                },
-             {
-                   "type": "erMatchRule", 
-                   "id": 0, 
-                   "name": "testregex", 
-                   "start": 0, 
-                   "end": 0, 
-                  "matchURL": null, 
-                      "matches": [
-                      {
-                           "matchValue": "https", 
-                           "matchOperator": "equals", 
-                          "negate": false,
-                           "caseSensitive": false, 
-                           "matchType": "protocol", 
-                       },
+               {
+                   "type": "erMatchRule",
+                   "id":0,
+                   "name": "RegexRedirect",
+                    "start": 0,
+                    "end": 0,  
+                    "matches": [
                        {
-                           "matchValue": "akamaipremium.dev.technology.ca.gov", 
-                          "matchOperator": "equals", 
-                          "negate": false,
-                           "caseSensitive": false,
-                           "matchType": "hostname", 
-                        },
-                        {
-                            "matchValue": "(http|https)://akamaipremium.dev.technology.ca.gov/pdf/(.*)", 
-                           "matchOperator": "equals", 
+                           "matchValue": "https", 
+                           "matchOperator": "equals",
                            "negate": false,
                            "caseSensitive": false, 
-                          "matchType": "regex", 
-                       } 
-                                   ],
-                    "statusCode": 301,
-                     "redirectURL": "\\\\1://files.covid19.ca.gov/pdf/\\\\2", 
-                   "useIncomingQueryString": false
+                           "matchType": "protocol"
+                       }, 
+                       { 
+                           "matchValue": "akamaipremium.dev.technology.ca.gov", 
+                           "matchOperator": "equals", 
+                           "negate": false, 
+                           "caseSensitive": false, 
+                           "matchType": "hostname"
+                       }, 
+                       { 
+                           "matchValue": "(http|https)://akamaipremium.dev.technology.ca.gov/pdf/(.*)", 
+                           "matchOperator": "equals",
+                           "negate": false, 
+                           "caseSensitive": false,
+                           "matchType": "regex"
+                       }
+                       
+                   ],
+                    "statusCode": 301, 
+                    "redirectURL": "\\\\1://files.covid19.ca.gov/pdf/\\\\2", 
+                    "useIncomingQueryString": false, 
+                    "useRelativeUrl": "relative_url"
                }
            ] 
 }
