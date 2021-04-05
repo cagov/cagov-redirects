@@ -40,7 +40,8 @@
                    "id":0,
                    "name": "RegexRedirect",
                     "start": 0,
-                    "end": 0,  
+                    "end": 0,
+                    "matchURL": null,  
                     "matches": [
                        {
                            "matchValue": "https", 
@@ -63,11 +64,11 @@
                            "caseSensitive": false,
                            "matchType": "regex"
                        }
-                       
                    ],
                     "statusCode": 301, 
-                    "redirectURL": "\\\\1://files.covid19.ca.gov/pdf/\\\\2", 
-                    "useIncomingQueryString": false
+                    "redirectURL": "\\1://files.covid19.ca.gov/pdf/\\2", 
+                    "useIncomingQueryString": false, 
+                    "useRelativeUrl": "none"
                }
            ] 
 }
