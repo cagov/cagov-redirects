@@ -67,8 +67,7 @@
                    ],
                     "statusCode": 301, 
                     "redirectURL": "\\\\1://files.covid19.ca.gov/pdf/\\\\2", 
-                    "useIncomingQueryString": false, 
-                    "useRelativeUrl": "relative_url"
+                    "useIncomingQueryString": false
                }
            ] 
 }
