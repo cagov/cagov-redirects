@@ -3,7 +3,7 @@
                 {
                    "type": "erMatchRule",
                    "id":0,
-                   "name": "Rule001",
+                   "name": "StateDashboadToSaferEconomy",
                     "start": 0,
                     "end": 0,  
                     "matches": [
@@ -35,40 +35,39 @@
                     "useIncomingQueryString": false, 
                     "useRelativeUrl": "relative_url"
                },
-               {
-                   "type": "erMatchRule",
-                   "id":0,
-                   "name": "Rule03",
-                    "start": 0,
-                    "end": 0,  
-                    "matches": [
-                       {
+             {
+                   "type": "erMatchRule", 
+                   "id": 0, 
+                   "name": "testregex", 
+                   "start": 0, 
+                   "end": 0, 
+                  "matchURL": null, 
+                      "matches": [
+                      {
                            "matchValue": "https", 
-                           "matchOperator": "equals",
+                           "matchOperator": "equals", 
+                          "negate": false,
+                           "caseSensitive": false, 
+                           "matchType": "protocol", 
+                       },
+                       {
+                           "matchValue": "akamaipremium.dev.technology.ca.gov", 
+                          "matchOperator": "equals", 
+                          "negate": false,
+                           "caseSensitive": false,
+                           "matchType": "hostname", 
+                        },
+                        {
+                            "matchValue": "(http|https)://akamaipremium.dev.technology.ca.gov/pdf/(.*)", 
+                           "matchOperator": "equals", 
                            "negate": false,
                            "caseSensitive": false, 
-                           "matchType": "protocol"
-                       }, 
-                       { 
-                           "matchValue": "akamaipremium.dev.technology.ca.gov", 
-                           "matchOperator": "equals", 
-                           "negate": false, 
-                           "caseSensitive": false, 
-                           "matchType": "hostname"
-                       }, 
-                       { 
-                           "matchValue": "ruletest03", 
-                           "matchOperator": "equals",
-                           "negate": false, 
-                           "caseSensitive": false,
-                           "matchType": "path"
-                       }
-                       
-                   ],
-                    "statusCode": 301, 
-                    "redirectURL": "page3.php", 
-                    "useIncomingQueryString": false, 
-                    "useRelativeUrl": "relative_url"
+                          "matchType": "regex", 
+                       } 
+                                   ],
+                    "statusCode": 301,
+                     "redirectURL": "\\\\1://files.covid19.ca.gov/pdf/\\\\2", 
+                   "useIncomingQueryString": false
                }
            ] 
 }
