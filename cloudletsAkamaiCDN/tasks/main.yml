@@ -1,0 +1,35 @@
+- set_fact:
+   currDir: "{{ playbook_dir }}/roles/cloudletsAkamaiCDN"
+
+- name: Initiate User List
+  set_fact:
+    matchRules: "{{ (lookup('file', '{{ currDir }}/rulesconfig/rules.json') | from_json)['matchRules'] }}"
+
+- name: Add new JSON Objects to List
+  set_fact:
+    matchRules:  "{{ matchRules + (lookup('file', item) | from_json)['matchRules'] }}"
+  with_fileglob: '{{ currDir }}/files/*.json'
+
+
+- name: Debug
+  debug:
+   var:  matchRulesv2
+
+
+- name: write var to file
+  ansible.builtin.copy:
+    content: "{{ {'matchRules':  (matchRules | to_nice_json) | from_json } }}"
+    remote_src: yes
+    dest: "{{ currDir }}/rulesconfig/finalrules.json"
+
+- name: List available Cloudlets 
+  command: akamai cloudlets list
+
+#- name: Retrieve policy
+# command: akamai cloudlets retrieve --policy sample_name --only-match-rules
+
+- name: Update Existing Policy with NEW rule
+  command: akamai cloudlets update --policy sample_name --file {{ currDir }}/rulesconfig/finalrules.json
+
+#- name: Retrieve Existing Policy 
+#  command: akamai cloudlets retrieve --policy sample_name
