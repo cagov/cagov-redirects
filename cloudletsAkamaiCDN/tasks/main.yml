@@ -1,5 +1,5 @@
 - set_fact:
-   currDir: "{{ playbook_dir }}/roles/cloudletsAkamaiCDN"
+   currDir: "{{ playbook_dir }}/cloudletsAkamaiCDN"
 
 - name: Initiate User List
   set_fact:
